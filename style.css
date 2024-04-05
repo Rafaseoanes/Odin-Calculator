@@ -1,5 +1,6 @@
 body {
-    background-color: #24252f;
+    /* background-color: #24252f; */
+    background-color: #33364a;
     height: 100vh;
     margin: 0;
     padding: 0;
@@ -33,13 +34,32 @@ button {
     align-items: center;
 }
 
+#buttons {
+    background-color: #24252f;
+    padding: 0.8em 1em;
+    border-radius: 5px;
+}
+
 #equalsKey {
     background-color: #262a4b;
     height: 50px;
     width: 106px;
 
 }
-#clearKey{
+
+#clearKey {
     height: 50px;
     width: 106px;
+}
+.operatorKey{
+    background-color: #464a6d;
+}
+
+#display {
+    background-color: #656a8c;
+    height: 50px;
+    width: 252px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    
 }
