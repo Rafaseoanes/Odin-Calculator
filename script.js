@@ -8,7 +8,7 @@ console.log("hey")
 
 //.toFixed(5)
 let firtsNum = 0
-let sencondNum = 0
+let secondNum = 0
 let operator = ""
 
 const add = function (firtsUserInput, secondUserInput) {
@@ -30,8 +30,25 @@ const divide = function (firtsUserInput, secondUserInput) {
 
 
 
-const operate = (firtsNum, sencondNum, operator){
-    
+const operate = (firtsNum, operator, secondNum) => {
+    switch (operator) {
+        case "+":
+            console.log(add(firtsNum, secondNum))
+            break;
+        case "-":
+            console.log(subtract(firtsNum, secondNum))
+            break;
+        case "*":
+            console.log(multiply(firtsNum, secondNum))
+            break;
+        case "/":
+            console.log(divide(firtsNum, secondNum))
+            break;
+
+    }
 }
 
-console.log(divide("53", 6))
+operate("53", "+", 6)
+operate("53", "-", 6)
+operate("53", "*", 6)
+operate("53", "/", 6)
