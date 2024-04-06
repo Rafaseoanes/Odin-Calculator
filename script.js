@@ -52,3 +52,14 @@ operate("53", "+", 6)
 operate("53", "-", 6)
 operate("53", "*", 6)
 operate("53", "/", 6)
+
+let buttons = document.getElementsByClassName("calButton")
+let displayText = document.getElementById("displayText")
+
+console.log(buttons)
+
+for(let button of buttons){
+    button.addEventListener("click", (e)=>{
+        displayText.innerText = e.target.value
+    })
+}

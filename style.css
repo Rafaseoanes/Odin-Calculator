@@ -59,10 +59,16 @@ button {
 }
 
 #display {
-    background-color: #656a8c;
+    /* background-color: #656a8c; */
+    background-color: #565b7a;
     height: 50px;
     width: 252px;
     border-radius: 5px;
     margin-bottom: 10px;
     
+}
+#display h3{
+    margin: 15px 20px;
+    text-align: end;
+    color: #8288c4;
 }

@@ -5,14 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="./script.js"></script>
     <title>Odin Calculator</title>
 </head>
 
 <body>
     <div id="calculatorContainer">
         <div id="display">
-            0
+           <h3 id="displayText"></h3>
         </div>
         <div id="buttons">
             <div>
@@ -34,9 +33,9 @@
                 <button class="operatorKey">&minus;</button>
             </div>
             <div>
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
+                <button value="1" class="calButton">1</button>
+                <button value="2" class="calButton">2</button>
+                <button value="3" class="calButton">3</button>
                 <button class="operatorKey">&plus;</button>
             </div>
             <div>
@@ -47,6 +46,7 @@
             </div>
         </div>
     </div>
+    <script src="./script.js"></script>
 </body>
 
 </html>
