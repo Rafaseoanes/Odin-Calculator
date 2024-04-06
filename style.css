@@ -67,8 +67,22 @@ button {
     margin-bottom: 10px;
     
 }
-#display h3{
-    margin: 15px 20px;
+#displayText{
+    resize: none;
+    height: 38px;
+    width: 220px;
+    line-height: 38px;
+    border-radius: 5px;
+    padding: 5px 15px;
     text-align: end;
     color: #8288c4;
+    font-size: larger;
+    font-weight: 500;
+    background-color: transparent;
+    border: none;
+    
+    
 }
+#displayText::placeholder {
+    color: #8288c4; 
+  }
