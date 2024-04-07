@@ -1,14 +1,6 @@
-console.log("hey")
 
-
-// add
-// subtract
-// multiply
-// divide
-
-//.toFixed(5)
-let firtsNum = 0
-let secondNum = 0
+let firtsNum = ""
+let secondNum = ""
 let operator = ""
 
 const add = function (firtsUserInput, secondUserInput) {
@@ -48,18 +40,34 @@ const operate = (firtsNum, operator, secondNum) => {
     }
 }
 
-operate("53", "+", 6)
-operate("53", "-", 6)
-operate("53", "*", 6)
-operate("53", "/", 6)
+const buttons = document.getElementsByClassName("calButton")
+const displayText = document.getElementById("displayText")
 
-let buttons = document.getElementsByClassName("calButton")
-let displayText = document.getElementById("displayText")
 
-console.log(buttons)
+for (let button of buttons) {
+    button.addEventListener("click", (e) => {
+        updateDisplay(e)
 
-for(let button of buttons){
-    button.addEventListener("click", (e)=>{
-        displayText.innerText = e.target.value
     })
 }
+
+function updateDisplay(e) {
+    if (e.target.value == "+" || e.target.value == "-" || e.target.value == "*" || e.target.value == "/") {
+        operator = e.target.value
+        console.log(operator)
+        displayText.innerText += firtsNum
+    } else {
+        firtsNum += e.target.value
+        displayText.innerText = firtsNum
+    }
+
+}
+
+const clearKey = document.getElementById("clearKey")
+
+clearKey.addEventListener("click", () => {
+    firtsNum = ""
+    secondNum = ""
+    operator = ""
+    displayText.innerText = ""
+})

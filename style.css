@@ -1,5 +1,5 @@
 body {
-    /* background-color: #24252f; */
+
     background-color: #33364a;
     height: 100vh;
     margin: 0;
@@ -54,20 +54,22 @@ button {
     height: 50px;
     width: 106px;
 }
-.operatorKey{
+
+.operatorKey {
     background-color: #464a6d;
 }
 
 #display {
-    /* background-color: #656a8c; */
+
     background-color: #565b7a;
     height: 50px;
     width: 252px;
     border-radius: 5px;
     margin-bottom: 10px;
-    
+
 }
-#displayText{
+
+#displayText {
     resize: none;
     height: 38px;
     width: 220px;
@@ -80,9 +82,10 @@ button {
     font-weight: 500;
     background-color: transparent;
     border: none;
-    
-    
+
+
 }
+
 #displayText::placeholder {
-    color: #8288c4; 
-  }
+    color: #8288c4;
+}
