@@ -52,13 +52,21 @@ for (let button of buttons) {
 }
 
 function updateDisplay(e) {
+
     if (e.target.value == "+" || e.target.value == "-" || e.target.value == "*" || e.target.value == "/") {
         operator = e.target.value
         console.log(operator)
         displayText.innerText += firtsNum
-    } else {
+
+    } else if (operator == "") {
         firtsNum += e.target.value
         displayText.innerText = firtsNum
+    } else {
+        displayText.innerText = ""
+        secondNum += e.target.value
+        displayText.innerText = secondNum
+        console.log(firtsNum, operator, secondNum)
+
     }
 
 }
@@ -71,3 +79,4 @@ clearKey.addEventListener("click", () => {
     operator = ""
     displayText.innerText = ""
 })
+
