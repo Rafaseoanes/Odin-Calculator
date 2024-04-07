@@ -46,24 +46,23 @@ const displayText = document.getElementById("displayText")
 
 for (let button of buttons) {
     button.addEventListener("click", (e) => {
-        let value = e.target.value
-        updateDisplay(value)
+        updateDisplay(e)
 
     })
 }
 
-function updateDisplay(value) {
+function updateDisplay(e) {
 
-    if (value == "+" || value == "-" || value == "*" || value == "/") {
-        operator = value
+    if (e.target.value == "+" || e.target.value == "-" || e.target.value == "*" || e.target.value == "/") {
+        operator = e.target.value
         // console.log(operator)
 
     } else if (operator == "") {
-        firtsNum += value
+        firtsNum += e.target.value
         displayText.innerText = firtsNum
     } else {
         displayText.innerText = ""
-        secondNum += value
+        secondNum += e.target.value
         displayText.innerText = secondNum
         // console.log(firtsNum, operator, secondNum)
 
@@ -86,9 +85,6 @@ equalsKey.addEventListener("click", () => {
     let result = operate(firtsNum, operator, secondNum)
     // console.log(result)
     displayText.innerText = result
-    firtsNum = result
-    secondNum = ""
-    operator = ""
-    // updateDisplay(result)
+    // firtsNum = result
 
 })
