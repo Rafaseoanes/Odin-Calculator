@@ -16,8 +16,8 @@ const multiply = function (firtsUserInput, secondUserInput) {
 }
 
 const divide = function (firtsUserInput, secondUserInput) {
-    let results = parseInt(firtsUserInput) / parseInt(secondUserInput)
-    return results.toFixed(5)
+    return parseInt(firtsUserInput) / parseInt(secondUserInput)
+    
 }
 
 
@@ -25,17 +25,17 @@ const divide = function (firtsUserInput, secondUserInput) {
 const operate = (firtsNum, operator, secondNum) => {
     switch (operator) {
         case "+":
-            console.log(add(firtsNum, secondNum))
-            break;
+            return add(firtsNum, secondNum)
+            
         case "-":
-            console.log(subtract(firtsNum, secondNum))
-            break;
+            return subtract(firtsNum, secondNum)
+            
         case "*":
-            console.log(multiply(firtsNum, secondNum))
-            break;
+            return multiply(firtsNum, secondNum)
+            
         case "/":
-            console.log(divide(firtsNum, secondNum))
-            break;
+            return divide(firtsNum, secondNum)
+            
 
     }
 }
@@ -80,3 +80,12 @@ clearKey.addEventListener("click", () => {
     displayText.innerText = ""
 })
 
+const equalsKey = document.getElementById("equalsKey")
+
+equalsKey.addEventListener("click", ()=>{
+    let result = operate(firtsNum, operator, secondNum)
+    console.log(result)
+    displayText.innerText = result
+    firtsNum = result
+    
+})
