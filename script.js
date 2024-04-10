@@ -116,17 +116,22 @@ backspace.addEventListener("click", () => {
 
 //This function gets the results and updates the display
 function getResults() {
-    let result = operate(firtsNum, operator, secondNum)
-    // console.log(result)
-    displayText.innerText = result
-    if (result == "Oooops!!") {
-        firtsNum = "0"
-        secondNum = ""
-        operator = ""
+    if (firtsNum == "" || secondNum == "" || operator == "") {
+        return
     } else {
 
-        firtsNum = result
-        secondNum = ""
-        operator = ""
+        let result = operate(firtsNum, operator, secondNum)
+        // console.log(result)
+        displayText.innerText = result
+        if (result == "Oooops!!") {
+            firtsNum = ""
+            secondNum = ""
+            operator = ""
+        } else {
+
+            firtsNum = result
+            secondNum = ""
+            operator = ""
+        }
     }
 }
