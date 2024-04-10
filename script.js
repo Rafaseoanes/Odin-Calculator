@@ -99,6 +99,8 @@ const equalsKey = document.getElementById("equalsKey")
 
 equalsKey.addEventListener("click", getResults)
 
+
+//Backspace key funtionality:
 const backspace = document.getElementById("backspace")
 
 backspace.addEventListener("click", () => {
@@ -112,6 +114,7 @@ backspace.addEventListener("click", () => {
 
 })
 
+//This function gets the results and updates the display
 function getResults() {
     let result = operate(firtsNum, operator, secondNum)
     // console.log(result)
