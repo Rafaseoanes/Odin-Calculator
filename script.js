@@ -99,7 +99,18 @@ const equalsKey = document.getElementById("equalsKey")
 
 equalsKey.addEventListener("click", getResults)
 
+const backspace = document.getElementById("backspace")
 
+backspace.addEventListener("click", () => {
+    if (secondNum !== "") {
+        secondNum = secondNum.slice(0, -1)
+        displayText.innerText = secondNum
+    } else {
+        firtsNum = firtsNum.slice(0, -1)
+        displayText.innerText = firtsNum
+    }
+
+})
 
 function getResults() {
     let result = operate(firtsNum, operator, secondNum)
