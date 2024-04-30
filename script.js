@@ -6,19 +6,19 @@ let operator = ""
 
 //Main functions for each operation:
 const add = function (firtsUserInput, secondUserInput) {
-    return parseInt(firtsUserInput) + parseInt(secondUserInput)
+    return parseFloat(firtsUserInput) + parseFloat(secondUserInput)
 }
 
 const subtract = function (firtsUserInput, secondUserInput) {
-    return parseInt(firtsUserInput) - parseInt(secondUserInput)
+    return parseFloat(firtsUserInput) - parseFloat(secondUserInput)
 }
 
 const multiply = function (firtsUserInput, secondUserInput) {
-    return parseInt(firtsUserInput) * parseInt(secondUserInput)
+    return parseFloat(firtsUserInput) * parseFloat(secondUserInput)
 }
 
 const divide = function (firtsUserInput, secondUserInput) {
-    return parseInt(firtsUserInput) / parseInt(secondUserInput)
+    return parseFloat(firtsUserInput) / parseFloat(secondUserInput)
 
 }
 
@@ -63,7 +63,13 @@ for (let button of buttons) {
 
 //The updateDisplay function handles the display of the calculator when a button is pressed
 function updateDisplay(value) {
+    if (value == "." && firtsNum.includes(".") && !secondNum) {
+        
+        return
 
+    }else if(value == "." && secondNum.includes(".")){
+        return
+    }
     if (value == "+" || value == "-" || value == "*" || value == "/") {
         if (firtsNum && secondNum && operator) {
             // console.log(firtsNum, secondNum, operator)
@@ -80,10 +86,15 @@ function updateDisplay(value) {
         secondNum += value
         displayText.innerText = secondNum
         // console.log(firtsNum, operator, secondNum)
-
     }
 
+
 }
+
+
+
+
+
 
 //Funtionality for the clearKey Button:
 const clearKey = document.getElementById("clearKey")
@@ -122,7 +133,8 @@ function getResults() {
 
         let result = operate(firtsNum, operator, secondNum)
         // console.log(result)
-        displayText.innerText = result
+        
+        displayText.innerText =  result
         if (result == "Oooops!!") {
             firtsNum = ""
             secondNum = ""
